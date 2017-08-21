@@ -7,17 +7,20 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.zach.broadcastdemo.Dynamic.DynamicBroadcast;
+import com.example.zach.broadcastdemo.Local.LocalActivity;
 import com.example.zach.broadcastdemo.Static.StaticActivity;
 
 public class MainActivity extends AppCompatActivity {
     Button staticBroadcast;
     Button dynamicBroadcast;
+    Button localBroadcast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         staticBroadcast = (Button) findViewById(R.id.staticBroad);
         dynamicBroadcast = (Button) findViewById(R.id.dynamicBraodcast);
+        localBroadcast = (Button) findViewById(R.id.localBraodcast);
 
         staticBroadcast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DynamicBroadcast.class);
+                startActivity(intent);
+            }
+        });
+
+        localBroadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LocalActivity.class);
                 startActivity(intent);
             }
         });

@@ -33,4 +33,14 @@
         android:layout_below="@+id/staticBroad"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dynamic Broadcast"
+        android:id="@+id/localBraodcast"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/dynamicBraodcast"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

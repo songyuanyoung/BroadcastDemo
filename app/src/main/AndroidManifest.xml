@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zach.broadcastdemo">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,10 +23,11 @@
 
         <receiver android:name=".Static.StaticReciever">
             <intent-filter android:priority="100">
-                <action android:name="com.example.zach.broadcastdemo.static"></action>
+                <action android:name="com.example.zach.broadcastdemo.static" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".Local.LocalActivity"></activity>
     </application>
 
 </manifest>
